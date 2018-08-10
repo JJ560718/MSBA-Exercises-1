@@ -453,34 +453,4 @@ sp2
 
 ![](Evans_Jonathan_Exercises1_files/figure-markdown_github/unnamed-chunk-17-4.png)
 
-The plots and variances above shed some light on the relationship between the features we selected from the corrplot. Principal Component 1 makes up a large amount of the variance in the data. We can also see that we were able to make good use of our feature space. I also created a column in the dataframe called fitYN that separated Twitter users that I considered to be fit from Twitter users that were not fit. If someone rated fitness less than 5, I put them in the non-fit category. If they rated fitness higher than 5, I said that they were fit. This separation was based on intuition, but it produced some interesting findings. When we look at the component plot, we see that fit Twitter users (blue dots) are clearly distinguished from non-fit Twitter users (red dots). Non-fit Twitter users tend to be more on the right side of the plot and fit Twitter users are on the left.
-
-``` r
-o1 = order(loadings[,1], decreasing=TRUE)
-colnames(W)[head(o1,25)]
-```
-
-    ## [1] "eco"              "food"             "cooking"         
-    ## [4] "outdoors"         "personal_fitness" "health_nutrition"
-
-``` r
-colnames(W)[tail(o1,25)]
-```
-
-    ## [1] "eco"              "food"             "cooking"         
-    ## [4] "outdoors"         "personal_fitness" "health_nutrition"
-
-``` r
-o2 = order(loadings[,2], decreasing=TRUE)
-colnames(W)[head(o2,25)]
-```
-
-    ## [1] "cooking"          "health_nutrition" "outdoors"        
-    ## [4] "personal_fitness" "eco"              "food"
-
-``` r
-colnames(W)[tail(o2,25)]
-```
-
-    ## [1] "cooking"          "health_nutrition" "outdoors"        
-    ## [4] "personal_fitness" "eco"              "food"
+The plots and variances above shed some light on the relationship between the features we selected from the corrplot. Principal Component 1 makes up a large amount of the variance in the data. We can also see that we were able to make good use of our feature space. I also created a column in the dataframe called fitYN that separated Twitter users that I considered to be fit from Twitter users that were not fit. If someone rated fitness less than 5, I put them in the non-fit category. If they rated fitness higher than 5, I said that they were fit. This separation was based on intuition, but it produced some interesting findings. When we look at the component plot, we see that fit Twitter users (blue dots) are clearly distinguished from non-fit Twitter users (red dots). Non-fit Twitter users tend to be more on the right side of the plot and fit Twitter users are on the left. We can call this the "Fitness Factor".
