@@ -2,7 +2,7 @@
 title: "Evans_Jonathan_Exercises1"
 author: "Jonathan Evans"
 date: "August 10, 2018"
-output: md_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
